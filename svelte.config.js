@@ -21,18 +21,7 @@ const config = {
 				compress({ algorithm: "brotliCompress" }),
 				viteSingleFile()
 			],
-			build: {
-				minify: "esbuild",
-				assetsInlineLimit: 100000000,
-				chunkSizeWarningLimit: 100000000,
-				brotliSize: false,
-				rollupOptions: {
-					inlineDynamicImports: true,
-					output: {
-						manualChunks: () => "app.js",
-					},
-				},
-			}
+			
 		})
 	}
 };
